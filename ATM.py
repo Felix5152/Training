@@ -1,16 +1,15 @@
+#This is a ATM app, you log in into a bank account, then you can deposit or withdraw specific amount of money.
 print("Welcome to the BANK")
 pin = 1234
 tries = 3
 withdraw_correct_answer = False
-account_balance = 1000
+account_balance = 1000 #That's your account balance, you cannot withdraw more than that 
 wrong_command = True
 inputcode = 0
+
 while tries != 0:
-    inputcode = int(input("Please enter your pincode. (It's 1234): "))
-    if inputcode != pin:
-        tries -= 1
-        print(f"Wrong pin code, You have {tries} tries left. ")
-    else:
+    inputcode = input("Please enter your pincode. (It's 1234): ")
+    if inputcode == '1234':
         while wrong_command == True:
             choice = input("Do you want to deposit or withdraw? ")
             while choice.lower() == 'deposit':
@@ -33,6 +32,11 @@ while tries != 0:
                         print("Enter the correct amount!")
             else:
                 print("I don't understand this command.")  
+    else: 
+        inputcode != pin
+        tries -= 1
+        print(f"Wrong pin code, You have {tries} tries left. ")
+    
 print("You've ran out of tries!")
 
 
