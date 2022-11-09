@@ -1,4 +1,3 @@
-dice_values = [1,2,3,4,5,6]
 import random
 class Dice:
     def roll(self):
@@ -9,8 +8,3 @@ class Dice:
 
 dice = Dice()
 print(dice.roll())
-
-
-
-
- 
