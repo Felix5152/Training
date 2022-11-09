@@ -1,3 +1,4 @@
+#This code doesn't apply to DRY method, I will eventually repair this.
 print("Welcome to our shopping site!")
 for_while = True
 shopping_cost = 0
